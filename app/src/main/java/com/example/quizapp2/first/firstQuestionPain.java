@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.quizapp2.R;
 import com.example.quizapp2.dataModel.QuestionModel;
+import com.example.quizapp2.second.frontDashSecond;
 
 public class firstQuestionPain extends AppCompatActivity {
 
@@ -60,6 +62,8 @@ public class firstQuestionPain extends AppCompatActivity {
         downTimer.cancel();
         dialog.setContentView(R.layout.wright_alert_popup);
         rightNext=dialog.findViewById(R.id.rightNext);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
         rightNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,13 +79,20 @@ public class firstQuestionPain extends AppCompatActivity {
                     dialog.dismiss();
                 }else if(pos==15){
                     mark++;
+                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+                    startActivity(intent);
+                    intent.putExtra("prevMarks",mark);
+                    finish();
                 }else{
                     Log.d("appQuize", "marks"+mark);
+                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+                    startActivity(intent);
+                    intent.putExtra("prevMarks",mark);
+                    finish();
                 }
             }
         });
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
+
     }
 
     public void wrongButtonProcess(){
@@ -102,7 +113,10 @@ public class firstQuestionPain extends AppCompatActivity {
                     dialog.dismiss();
 
                 }else{
-                    Log.d("appQuize", "marks"+mark);
+                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+                    startActivity(intent);
+                    intent.putExtra("prevMarks",mark);
+                    finish();
                 }
             }
         });
