@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizApp2</string>
+    <string name="SLTravrse">Powered by SL Traverse</string>
+    <string name="nextButton">Let\'s go in</string>
+    <string name="exitButton">Exit</string>
+
+</resources>
