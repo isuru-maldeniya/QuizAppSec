@@ -122,7 +122,7 @@ public class secondQuestionPlane extends AppCompatActivity {
             new QuestionModel("There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there are lot of babies. Who am I?","papaya","Watermelone","Pumpking","Apple","b"),
             new QuestionModel("What relation would your mother's brother's brother-in-law be to you?","Father","Uncle","Cousin","Elder brother","a"),
             new QuestionModel("Which country has the most dangerous national flag?","USA","Iran","Mossambic","Chaina","c"),
-            new QuestionModel("What is the answer for this?","168","96","72","76","d"),
+            new QuestionModel("What is the answer for this? 4+3x4(3x2) ","168","96","72","76","d"),
     };
 
 
