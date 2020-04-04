@@ -80,14 +80,14 @@ public class firstQuestionPain extends AppCompatActivity {
                 }else if(pos==15){
                     mark++;
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
-                    startActivity(intent);
                     intent.putExtra("prevMarks",mark);
+                    startActivity(intent);
                     finish();
                 }else{
                     Log.d("appQuize", "marks"+mark);
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
-                    startActivity(intent);
                     intent.putExtra("prevMarks",mark);
+                    startActivity(intent);
                     finish();
                 }
             }
@@ -114,8 +114,8 @@ public class firstQuestionPain extends AppCompatActivity {
 
                 }else{
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
-                    startActivity(intent);
                     intent.putExtra("prevMarks",mark);
+                    startActivity(intent);
                     finish();
                 }
             }
@@ -180,6 +180,7 @@ public class firstQuestionPain extends AppCompatActivity {
             new QuestionModel("This country always needs food. What is this?","Ethiopia","India","Hungary","Kenya","c"),
             new QuestionModel("What travels around the world but stays in one spot?","Stamp","Plane","Money","Ship","a"),
     };
+
 
     public void startTimer(){
         timelefttomiliseconds=20000;
