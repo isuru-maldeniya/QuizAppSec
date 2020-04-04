@@ -34,7 +34,7 @@ public class frontDashThird extends AppCompatActivity {
         }
 
         textView=(TextView) findViewById(R.id.overallpane_3);
-        presentage=(double) (marks*100/30);
+        presentage=(double) (marks*100/45);
         textView.setText("Overall you have earned "+presentage+"% marks");
 
     }
