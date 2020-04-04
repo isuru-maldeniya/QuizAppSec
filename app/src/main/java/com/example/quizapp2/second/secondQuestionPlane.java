@@ -178,6 +178,8 @@ public class secondQuestionPlane extends AppCompatActivity {
         downTimer.cancel();
         dialog.setContentView(R.layout.wright_alert_popup);
         rightNext=dialog.findViewById(R.id.rightNext);
+        TextView tex=dialog.findViewById(R.id.markText);
+        tex.setText("you have earned 2 mark");
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
         rightNext.setOnClickListener(new View.OnClickListener() {

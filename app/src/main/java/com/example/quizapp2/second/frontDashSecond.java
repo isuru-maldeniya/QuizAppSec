@@ -1,5 +1,6 @@
 package com.example.quizapp2.second;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,15 +18,20 @@ public class frontDashSecond extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_front_dash_second);
 
-        Bundle extras = getIntent().getExtras();
 
-        if (extras != null) {
-            marks=extras.getInt("prevMarks");
-            Log.d("appQuize", "Marks(fill) : "+marks);
+        if(savedInstanceState!=null){
+            marks=savedInstanceState.getInt("mark");
         }else{
-            marks=0;
-            Log.d("appQuize", "Marks(null) : "+marks);
+            Bundle extras = getIntent().getExtras();
+            if (extras != null) {
+                marks=extras.getInt("prevMarks");
+                Log.d("appQuize", "Marks(fill) : "+marks);
+            }else{
+                marks=0;
+                Log.d("appQuize", "Marks(null) : "+marks);
+            }
         }
+
 
 
     }
@@ -36,4 +42,10 @@ public class frontDashSecond extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("mark",marks);
+    }
+
 }
