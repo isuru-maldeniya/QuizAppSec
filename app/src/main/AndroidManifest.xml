@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".third.thirdQuestionPane"></activity>
+        <activity android:name=".conclusion.endDash"></activity>
+        <activity android:name=".third.thirdQuestionPane" />
         <activity android:name=".third.frontDashThird" />
         <activity android:name=".second.secondQuestionPlane" />
         <activity android:name=".second.frontDashSecond" />

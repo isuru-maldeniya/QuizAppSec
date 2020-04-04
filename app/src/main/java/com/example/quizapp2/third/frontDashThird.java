@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.quizapp2.R;
 
 public class frontDashThird extends AppCompatActivity {
-
+    double presentage;
     int marks;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,10 @@ public class frontDashThird extends AppCompatActivity {
                 Log.d("appQuize", "Marks(null) : "+marks);
             }
         }
+
+        textView=(TextView) findViewById(R.id.overallpane_3);
+        presentage=(double) (marks*100/30);
+        textView.setText("Overall you have earned "+presentage+"% marks");
 
     }
 

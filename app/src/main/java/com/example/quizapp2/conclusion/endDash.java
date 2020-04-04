@@ -1,25 +1,20 @@
-package com.example.quizapp2.second;
+package com.example.quizapp2.conclusion;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
 import com.example.quizapp2.R;
 
-public class frontDashSecond extends AppCompatActivity {
+public class endDash extends AppCompatActivity {
+
     int marks;
-    TextView textView;
-    double presentage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_front_dash_second);
-
+        setContentView(R.layout.activity_end_dash);
 
         if(savedInstanceState!=null){
             marks=savedInstanceState.getInt("mark");
@@ -33,17 +28,6 @@ public class frontDashSecond extends AppCompatActivity {
                 Log.d("appQuize", "Marks(null) : "+marks);
             }
         }
-        textView=(TextView) findViewById(R.id.overallpane);
-        presentage=(double) (marks*100/15);
-        textView.setText("Overall you have earned "+presentage+"% marks");
-
-    }
-
-    public void nextplane(View view) {
-        Intent intent=new Intent(this,secondQuestionPlane.class);
-        intent.putExtra("prevMarks",marks);
-        startActivity(intent);
-        finish();
     }
 
     protected void onSaveInstanceState(@NonNull Bundle outState) {

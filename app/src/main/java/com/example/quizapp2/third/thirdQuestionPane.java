@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.quizapp2.R;
+import com.example.quizapp2.conclusion.endDash;
 import com.example.quizapp2.dataModel.QuestionModel;
 import com.example.quizapp2.second.secondQuestionPlane;
 
@@ -106,10 +107,10 @@ public class thirdQuestionPane extends AppCompatActivity {
                 }else{
 
                     Log.d("appQuize", "marks"+prevMarks);
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
-//                    intent.putExtra("prevMarks",prevMarks);
-//                    startActivity(intent);
-//                    finish();
+                    Intent intent=new Intent(thirdQuestionPane.this, endDash.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -141,16 +142,16 @@ public class thirdQuestionPane extends AppCompatActivity {
                 }else if(pos==10){
                     prevMarks=prevMarks+3;
                     Log.d("appQuize", "marks"+prevMarks);
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
-//                    intent.putExtra("prevMarks",prevMarks);
-//                    startActivity(intent);
-//                    finish();
+                    Intent intent=new Intent(thirdQuestionPane.this, endDash.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }else{
                     Log.d("appQuize", "marks"+prevMarks);
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
-//                    intent.putExtra("prevMarks",prevMarks);
-//                    startActivity(intent);
-//                    finish();
+                    Intent intent=new Intent(thirdQuestionPane.this, endDash.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
