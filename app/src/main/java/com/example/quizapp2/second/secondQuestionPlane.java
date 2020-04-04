@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.example.quizapp2.R;
 import com.example.quizapp2.dataModel.QuestionModel;
 import com.example.quizapp2.first.firstQuestionPain;
+import com.example.quizapp2.third.frontDashThird;
 
 public class secondQuestionPlane extends AppCompatActivity {
 
@@ -163,10 +164,10 @@ public class secondQuestionPlane extends AppCompatActivity {
                 }else{
 
                     Log.d("appQuize", "marks"+prevMarks);
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashSecond.class);
-//                    startActivity(intent);
-//                    intent.putExtra("prevMarks",mark);
-//                    finish();
+                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -197,17 +198,17 @@ public class secondQuestionPlane extends AppCompatActivity {
                     dialog.dismiss();
                 }else if(pos==15){
                     prevMarks=prevMarks+2;
-
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashSecond.class);
-//                    startActivity(intent);
-//                    intent.putExtra("prevMarks",mark);
-//                    finish();
+                    Log.d("appQuize", "marks"+prevMarks);
+                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }else{
                     Log.d("appQuize", "marks"+prevMarks);
-//                    Intent intent=new Intent(secondQuestionPlane.this, frontDashSecond.class);
-//                    startActivity(intent);
-//                    intent.putExtra("prevMarks",mark);
-//                    finish();
+                    Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
+                    intent.putExtra("prevMarks",prevMarks);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
