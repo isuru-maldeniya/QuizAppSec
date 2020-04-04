@@ -110,7 +110,7 @@ public class secondQuestionPlane extends AppCompatActivity {
     private QuestionModel[] bank=new QuestionModel[]{
             new QuestionModel("It is a mammal. It's teeth are growing rapidly. What is it?","Rat","Cat","Pig","Dog","a"),
             new QuestionModel("I am living in a dynamic environment. I can't survive without it. I can swim. I have organs to breath here. What is my environment?","Fish","Air","Water","Tortoise","c"),
-            new QuestionModel("I have a neck but haven't a head. I have two arms but haven't hands. What am I?","Robot","Bag","Shirt","Skirt","b"),
+            new QuestionModel("I have a neck but haven't a head. I have two arms but haven't hands. What am I?","Robot","Shirt","Bag","Skirt","b"),
             new QuestionModel("I can talk. But you can't see me. I am talking after you call. What is it?","Secret","Alarm","Faith","Echo","d"),
             new QuestionModel("What can go up and come down without moving?","Temperature","Age","Wind","Ball","a"),
             new QuestionModel("I am only one colour but not one size. Whenever there is light, I'll be with you?","Bulb","Shadow","Sun","Moon","b"),
