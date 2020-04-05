@@ -45,9 +45,21 @@ public class endDash extends AppCompatActivity {
     }
 
     public void toWhatsApp(View view) {
+        final String packageName=getApplicationContext().getPackageName();
+        String url="";
+
+        try
+        {
+            url = "https://play.google.com/store/apps/details?id=" + packageName;
+        }
+        catch (android.content.ActivityNotFoundException anfe)
+        {
+            url = "https://play.google.com/store/apps/details?id=" + packageName;
+        }
+
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "#new #Qurantine #challenge. Hi this is a marvelous riddle quiz app. Here I am challenging you to think smarter.");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "#new #Qurantine #challenge. Hi this is a marvelous riddle quiz app. Here I am challenging you to think smarter. Here is the Playstore link "+url);
         sendIntent.setType("text/plain");
         sendIntent.setPackage("com.whatsapp");
         startActivity(sendIntent);
