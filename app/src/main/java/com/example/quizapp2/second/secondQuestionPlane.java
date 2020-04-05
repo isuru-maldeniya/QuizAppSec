@@ -147,6 +147,7 @@ public class secondQuestionPlane extends AppCompatActivity {
     public void wrongButtonProcess(){
         downTimer.cancel();
         dialog.setContentView(R.layout.wrong_alert_popup);
+        dialog.setCancelable(false);
         wrongNext=dialog.findViewById(R.id.wrongNext);
         wrongNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -178,6 +179,7 @@ public class secondQuestionPlane extends AppCompatActivity {
     public void rightButtonProcess(){
         downTimer.cancel();
         dialog.setContentView(R.layout.wright_alert_popup);
+        dialog.setCancelable(false);
         rightNext=dialog.findViewById(R.id.rightNext);
         TextView tex=dialog.findViewById(R.id.markText);
         tex.setText("you have earned 2 mark");

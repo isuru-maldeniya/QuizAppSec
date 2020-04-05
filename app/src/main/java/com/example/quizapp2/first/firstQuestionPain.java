@@ -61,6 +61,7 @@ public class firstQuestionPain extends AppCompatActivity {
     public void rightButtonProcess(){
         downTimer.cancel();
         dialog.setContentView(R.layout.wright_alert_popup);
+        dialog.setCancelable(false);
         rightNext=dialog.findViewById(R.id.rightNext);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
@@ -98,6 +99,7 @@ public class firstQuestionPain extends AppCompatActivity {
     public void wrongButtonProcess(){
         downTimer.cancel();
         dialog.setContentView(R.layout.wrong_alert_popup);
+        dialog.setCancelable(false);
         wrongNext=dialog.findViewById(R.id.wrongNext);
         wrongNext.setOnClickListener(new View.OnClickListener() {
             @Override
