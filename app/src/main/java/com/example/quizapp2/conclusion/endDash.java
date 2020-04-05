@@ -3,8 +3,10 @@ package com.example.quizapp2.conclusion;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.quizapp2.R;
@@ -42,4 +44,12 @@ public class endDash extends AppCompatActivity {
         outState.putInt("mark",marks);
     }
 
+    public void toWhatsApp(View view) {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "#new #Qurantine #challenge. Hi this is a marvelous riddle quiz app. Here I am challenging you to think smarter.");
+        sendIntent.setType("text/plain");
+        sendIntent.setPackage("com.whatsapp");
+        startActivity(sendIntent);
+    }
 }
