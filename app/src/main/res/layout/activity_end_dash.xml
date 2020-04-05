@@ -42,20 +42,36 @@
         app:srcCompat="@drawable/bulb_2" />
 
     <Button
+
+
         android:id="@+id/challengeButton"
-        android:layout_width="match_parent"
-        android:onClick="toWhatsApp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="30dp"
+        android:layout_width="129dp"
+        android:layout_height="88dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/button_2"
-        android:text="Let\'s challenge your friends"
+        android:background="@drawable/whatsapp_logo_2"
+        android:onClick="toWhatsApp"
+        android:text=""
         android:textColor="#fbc531"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="220dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/challengeButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.838" />
+        app:srcCompat="@drawable/challenge_without_frame" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
