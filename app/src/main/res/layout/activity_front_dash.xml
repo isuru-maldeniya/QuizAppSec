@@ -52,7 +52,7 @@
             android:text="@string/nextButton"
             android:textColor="#eb2f06"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/buttonB"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
