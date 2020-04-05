@@ -61,8 +61,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="220dp"
-        android:layout_height="207dp"
+        android:layout_width="207dp"
+        android:layout_height="88dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="12dp"
@@ -70,8 +70,10 @@
         android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/challengeButton"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/challenge_without_frame" />
+        app:layout_constraintVertical_bias="0.638"
+        app:srcCompat="@drawable/challenge_45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
