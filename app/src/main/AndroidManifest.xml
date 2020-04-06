@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.quizapp2">
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,15 +14,36 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3222044545735458~4428684383"/>
-        <activity android:name=".conclusion.endDash"></activity>
-        <activity android:name=".third.thirdQuestionPane" />
-        <activity android:name=".third.frontDashThird" />
-        <activity android:name=".second.secondQuestionPlane" />
-        <activity android:name=".second.frontDashSecond" />
-        <activity android:name=".first.firstQuestionPain" />
+        <activity android:name=".conclusion.endDash"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".third.thirdQuestionPane"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".third.frontDashThird"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".second.secondQuestionPlane"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".second.frontDashSecond"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".first.firstQuestionPain"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity" />
         <activity android:name=".first.frontDash" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
