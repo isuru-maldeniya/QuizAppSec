@@ -122,6 +122,42 @@ public class firstQuestionPain extends AppCompatActivity {
 //                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
 //                    interstitialAd.setAdUnitId("/6499/example/interstitial");
 //                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+
+//                    interstitialAd.setAdListener(new AdListener(){
+//                        @Override
+//                        public void onAdLoaded() {
+//                            Log.d("appQuize", "Ad was displayed");
+//                        }
+//
+//                        @Override
+//                        public void onAdFailedToLoad(int errorCode) {
+//                            // Code to be executed when an ad request fails.
+//                        }
+//
+//                        @Override
+//                        public void onAdOpened() {
+//                            // Code to be executed when the ad is displayed.
+//                        }
+//
+//                        @Override
+//                        public void onAdClicked() {
+//                            // Code to be executed when the user clicks on an ad.
+//                        }
+//
+//                        @Override
+//                        public void onAdLeftApplication() {
+//                            // Code to be executed when the user has left the app.
+//                        }
+//
+//                        @Override
+//                        public void onAdClosed() {
+//                            Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+//                            intent.putExtra("prevMarks",mark);
+//                            startActivity(intent);
+//                            finish();
+//                        }
+//                    });
+
                     if(interstitialAd.isLoaded()){
                         interstitialAd.show();
                         Log.d("appQuize", "Ad was displayed");
@@ -132,20 +168,22 @@ public class firstQuestionPain extends AppCompatActivity {
                     intent.putExtra("prevMarks",mark);
                     startActivity(intent);
                     finish();
+
                 }else{
 //                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
 //                    interstitialAd.setAdUnitId("/6499/example/interstitial");
 //                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+                    intent.putExtra("prevMarks",mark);
+                    startActivity(intent);
+                    finish();
                     if(interstitialAd.isLoaded()){
                         interstitialAd.show();
                         Log.d("appQuize", "Ad was displayed");
                     }else{
                         Log.d("appQuize", "Ad was not displayed");
                     }
-                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
-                    intent.putExtra("prevMarks",mark);
-                    startActivity(intent);
-                    finish();
+
                 }
             }
         });
@@ -174,16 +212,22 @@ public class firstQuestionPain extends AppCompatActivity {
 //                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
 //                    interstitialAd.setAdUnitId("/6499/example/interstitial");
 //                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+//                    if(interstitialAd.isLoaded()){
+//                        interstitialAd.show();
+//                        Log.d("appQuize", "Ad was displayed");
+//                    }else{
+//                        Log.d("appQuize", "Ad was not displayed");
+//                    }
+                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
+                    intent.putExtra("prevMarks",mark);
+                    startActivity(intent);
+                    finish();
                     if(interstitialAd.isLoaded()){
                         interstitialAd.show();
                         Log.d("appQuize", "Ad was displayed");
                     }else{
                         Log.d("appQuize", "Ad was not displayed");
                     }
-                    Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
-                    intent.putExtra("prevMarks",mark);
-                    startActivity(intent);
-                    finish();
                 }
             }
         });

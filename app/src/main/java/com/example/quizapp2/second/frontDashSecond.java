@@ -10,11 +10,15 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.quizapp2.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
+import com.google.android.gms.ads.doubleclick.PublisherAdView;
 
 public class frontDashSecond extends AppCompatActivity {
     int marks;
     TextView textView;
     double presentage;
+    private PublisherAdView mPublisherAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,43 @@ public class frontDashSecond extends AppCompatActivity {
         textView=(TextView) findViewById(R.id.overallpane);
         presentage=(double) (marks*100/15);
         textView.setText("Overall you have earned "+presentage+"% marks");
+
+        mPublisherAdView = findViewById(R.id.adview2);
+        PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
+        mPublisherAdView.loadAd(adRequest);
+
+        mPublisherAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                Log.d("appQuize", "Ad loaded");
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                Log.d("appQuize", "Ad was not loaded");
+            }
+        });
 
     }
 

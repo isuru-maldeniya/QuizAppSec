@@ -76,4 +76,17 @@
         app:layout_constraintVertical_bias="0.638"
         app:srcCompat="@drawable/challenge_45" />
 
+    <com.google.android.gms.ads.doubleclick.PublisherAdView
+        android:id="@+id/adview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="/6499/example/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"></com.google.android.gms.ads.doubleclick.PublisherAdView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

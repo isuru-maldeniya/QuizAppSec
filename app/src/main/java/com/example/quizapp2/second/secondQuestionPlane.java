@@ -18,6 +18,8 @@ import com.example.quizapp2.R;
 import com.example.quizapp2.dataModel.QuestionModel;
 import com.example.quizapp2.first.firstQuestionPain;
 import com.example.quizapp2.third.frontDashThird;
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
+import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 
 public class secondQuestionPlane extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class secondQuestionPlane extends AppCompatActivity {
     private CountDownTimer downTimer;
     TextView timePlane;
     private long timelefttomiliseconds=20000;
+    private PublisherInterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,12 @@ public class secondQuestionPlane extends AppCompatActivity {
                 prevMarks=0;
             }
         }
+
+
+        interstitialAd = new PublisherInterstitialAd(this);
+        interstitialAd.setAdUnitId("/6499/example/interstitial");
+        interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+
         textView=findViewById(R.id.questionView_2);
         a=(Button) findViewById(R.id.buttonA_2);
         b=(Button) findViewById(R.id.buttonB_2);
@@ -163,6 +172,12 @@ public class secondQuestionPlane extends AppCompatActivity {
                     dialog.dismiss();
 
                 }else{
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
 
                     Log.d("appQuize", "marks"+prevMarks);
                     Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
@@ -200,12 +215,24 @@ public class secondQuestionPlane extends AppCompatActivity {
                     dialog.dismiss();
                 }else if(pos==15){
                     prevMarks=prevMarks+2;
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
                     Log.d("appQuize", "marks"+prevMarks);
                     Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
                     intent.putExtra("prevMarks",prevMarks);
                     startActivity(intent);
                     finish();
                 }else{
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
                     Log.d("appQuize", "marks"+prevMarks);
                     Intent intent=new Intent(secondQuestionPlane.this, frontDashThird.class);
                     intent.putExtra("prevMarks",prevMarks);
