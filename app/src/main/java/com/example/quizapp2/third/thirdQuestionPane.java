@@ -195,14 +195,14 @@ public class thirdQuestionPane extends AppCompatActivity {
     private QuestionModel[] bank=new QuestionModel[]{
             new QuestionModel("Can't touch. Can't store. Can't make movement. What is this?","Air","Time","Energy","Force","a"),
             new QuestionModel("I am flying. I have no engine. Starting only from higer place. Who am I?","Bird","Plane","Jet","Parachute","c"),
-            new QuestionModel("I use for transportation. I am helping to keep connectivity. My value is depend on material made by me. What am I?","Plane","Lane","Chain","Train","b"),
-            new QuestionModel("When it is in the sky it is represnting some special thing. But it is located in the sky only very special times. What is this?","Flag","Logo","Fuction","Tower","d"),
+            new QuestionModel("I use for transportation. I am helping to keep connectivity. My value is depend on the material which is made with me. What am I?","Plane","Lane","Chain","Train","b"),
+            new QuestionModel("When it is in the sky it is represnting something special. But it is located in only very the sky only very special times. What is this?","Flag","Logo","Function","Tower","d"),
             new QuestionModel("I am used in cutting. As well as I am used in binding two things. What is this?","Knife","Sward","String","Tape","a"),
             new QuestionModel("Some kind of these are in the sky can't touch but can see from ground. Some kind of these are on the ground can touch can see and can store data. What is this?","Pen drive","Sun","Clouds","CD","b"),
-            new QuestionModel("Everyone thinks this dish was originally made in Italy but this dish was originally made in Chaina. What is this dish?","Cake","Roles","Burger","Pasta","d"),
+            new QuestionModel("Everyone thinks this dish was originally made in Italy but this dish was originally made in China. What is this dish?","Cake","Roles","Burger","Pasta","d"),
             new QuestionModel("How many seconds are there in one year?","31,536,000","12","3600","31,622,400","c"),
-            new QuestionModel("Tommorrow is neither thursday nor friday. Yesterday was not tuesday or wednesday. Today is not saturday,monday or sunday. What is today?","Wednesday","Friday","Tuesday","Thursday","d"),
-            new QuestionModel("I am five times as old as my young brother. After 3 years I will two times as old as my young brother. How old is my after 5 years?","10 years","12 years","14 years","8 years","b"),
+            new QuestionModel("Tomorrow is neither thursday nor friday. Yesterday was not tuesday or wednesday. Today is not saturday,monday or sunday. What is today?","Wednesday","Friday","Tuesday","Thursday","d"),
+            new QuestionModel("I am five times as old as my young brother. After 3 years I will two times as old as my younger brother. How old is me after 5 years?","10 years","12 years","14 years","8 years","b"),
 
     };
 

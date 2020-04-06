@@ -126,11 +126,11 @@ public class secondQuestionPlane extends AppCompatActivity {
             new QuestionModel("This takes you whenever you go but you wan't even feel it. Others use it more than you. What is this?","Brain","Mobile phone","Watch","Name","d"),
             new QuestionModel("One battlefield at a time. Sometimes it is very peaceful. Favourite place for many. What is this place?","Bathroom","Lunchroom","Bedroom","Classroom","c"),
             new QuestionModel("My job is to fillter things. Somethings are absorbed while filtering. If my job isn't done, you'll know I am sick. What am I?","Liver","Lung","Craw","Kidney","d"),
-            new QuestionModel("I am a god. Also I am a planet. Also you can use me to messuer the heat. What am I?","Jupiter","Mercury","Celsius","Venus","b"),
-            new QuestionModel("You can't see me but my smell can make me aware. I am sure you won't like my smell. What is this?","O2","CO2","H2O","H2S","d"),
+            new QuestionModel("I am a god. Also I am a planet. Also you can use me to measure the heat. What am I?","Jupiter","Mercury","Celsius","Venus","b"),
+            new QuestionModel("You can't see me but my smell can make me aware of you. I am sure you won't like my smell. What is this?","O2","CO2","H2O","H2S","d"),
             new QuestionModel("There was a green house. Inside the green house there was a white house. Inside the white house there was a red house. Inside the red house there are lot of babies. Who am I?","papaya","Watermelone","Pumpking","Apple","b"),
-            new QuestionModel("What relation would your mother's brother's brother-in-law be to you?","Father","Uncle","Cousin","Elder brother","a"),
-            new QuestionModel("Which country has the most dangerous national flag?","USA","Iran","Mossambic","Chaina","c"),
+            new QuestionModel("What relationship would your mother's brother's brother-in-law be to you?","Father","Uncle","Cousin","Elder brother","a"),
+            new QuestionModel("Which country has the most dangerous national flag?","USA","Iran","Mossambic","China","c"),
             new QuestionModel("What is the answer for this? 4+3x4(3x2) ","168","96","72","76","d"),
     };
 
