@@ -17,6 +17,16 @@ import android.widget.TextView;
 import com.example.quizapp2.R;
 import com.example.quizapp2.dataModel.QuestionModel;
 import com.example.quizapp2.second.frontDashSecond;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
+import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class firstQuestionPain extends AppCompatActivity {
 
@@ -29,6 +39,12 @@ public class firstQuestionPain extends AppCompatActivity {
     private CountDownTimer downTimer;
     TextView timePlane;
     private long timelefttomiliseconds=20000;
+    private PublisherInterstitialAd interstitialAd;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +59,13 @@ public class firstQuestionPain extends AppCompatActivity {
             mark=0;
         }
 
+//
+        interstitialAd = new PublisherInterstitialAd(this);
+        interstitialAd.setAdUnitId("/6499/example/interstitial");
+        interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+
+
+
         textView=(TextView)findViewById(R.id.level1Text);
         a=(Button) findViewById(R.id.buttonA);
         b=(Button) findViewById(R.id.buttonB);
@@ -56,6 +79,22 @@ public class firstQuestionPain extends AppCompatActivity {
         d.setText("D. "+bank[pos].getD());
         dialog=new Dialog(this);
         startTimer();
+
+
+
+        // Kaweesha you have to uncomment these lines
+
+//        List<String> testDeviceIds = Arrays.asList("33BE2250B43518CCDA7DE426D04EE231");
+//        RequestConfiguration configuration =
+//                new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+//        MobileAds.setRequestConfiguration(configuration);
+
+
+        // Kaweesha you have to uncomment these upper lines
+
+
+
+
     }
 
     public void rightButtonProcess(){
@@ -80,12 +119,29 @@ public class firstQuestionPain extends AppCompatActivity {
                     dialog.dismiss();
                 }else if(pos==15){
                     mark++;
+//                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
+//                    interstitialAd.setAdUnitId("/6499/example/interstitial");
+//                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
                     intent.putExtra("prevMarks",mark);
                     startActivity(intent);
                     finish();
                 }else{
-                    Log.d("appQuize", "marks"+mark);
+//                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
+//                    interstitialAd.setAdUnitId("/6499/example/interstitial");
+//                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
                     intent.putExtra("prevMarks",mark);
                     startActivity(intent);
@@ -115,6 +171,15 @@ public class firstQuestionPain extends AppCompatActivity {
                     dialog.dismiss();
 
                 }else{
+//                    interstitialAd = new PublisherInterstitialAd(dialog.getContext());
+//                    interstitialAd.setAdUnitId("/6499/example/interstitial");
+//                    interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
+                    if(interstitialAd.isLoaded()){
+                        interstitialAd.show();
+                        Log.d("appQuize", "Ad was displayed");
+                    }else{
+                        Log.d("appQuize", "Ad was not displayed");
+                    }
                     Intent intent=new Intent(firstQuestionPain.this, frontDashSecond.class);
                     intent.putExtra("prevMarks",mark);
                     startActivity(intent);
