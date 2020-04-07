@@ -61,7 +61,7 @@ public class firstQuestionPain extends AppCompatActivity {
 
 //
         interstitialAd = new PublisherInterstitialAd(this);
-        interstitialAd.setAdUnitId("/6499/example/interstitial");
+        interstitialAd.setAdUnitId("ca-app-pub-3222044545735458/6288560963");
         interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
 
 

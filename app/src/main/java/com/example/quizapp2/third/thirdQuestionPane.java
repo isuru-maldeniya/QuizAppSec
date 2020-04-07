@@ -57,7 +57,7 @@ public class thirdQuestionPane extends AppCompatActivity {
         }
 
         interstitialAd = new PublisherInterstitialAd(this);
-        interstitialAd.setAdUnitId("/6499/example/interstitial");
+        interstitialAd.setAdUnitId("ca-app-pub-3222044545735458/5534431238");
         interstitialAd.loadAd(new PublisherAdRequest.Builder().build());
 
         textView=findViewById(R.id.questionView_3);

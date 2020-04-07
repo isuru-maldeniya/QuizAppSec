@@ -101,7 +101,7 @@ public class endDash extends AppCompatActivity {
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "#new #Qurantine #challenge. Hi this is a marvelous riddle quiz app. Here I am challenging you to think smarter. Here is the Playstore link "+url);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "#new #Funtime #challenge. Hey this is a marvelous riddles app. Here I am challenging you to think smarter. Here is the Playstore link "+url);
         sendIntent.setType("text/plain");
         sendIntent.setPackage("com.whatsapp");
         startActivity(sendIntent);
